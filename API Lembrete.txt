@@ -1,0 +1,13 @@
+API Lembrete 
+
+ - GET ALL (todos os lembretes)
+ - DELETE (apagar os lembretes)
+ - ADD (criar lembretes)
+ - UPDATE (atualizar lembretes)
+ - GET [id] (pegaria um único lembrete)
+
+Model Lembrete
+   
+ id
+ titulo
+ corpo
