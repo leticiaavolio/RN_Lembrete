@@ -1,3 +1,5 @@
 1- Relembrar as rotas da API
 2- Definir Wireframes x funcionalidades x fluxo de telas
-3- 
+3- Definir a arquitetura e fluxo de telas com base no React Native (Navigation ou Router)
+4- Criar o repositório RN com expo, fazer o link com o repositório remoto.
+5- Instalar o expo-router. https://docs.expo.dev/router/installation/
