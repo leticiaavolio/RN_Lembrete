@@ -3,32 +3,21 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import { Shadow } from "react-native-shadow-2";
-import Button from "../components/Button/button";
 
 export default function Index() {
 
     function  navigate(){
         
-        router.replace('/listLembrete')
+        router.replace('/home')
     }
     return (
         <SafeAreaView style={styles.container}>
-
-                <Shadow distance={1} offset={[5, 5]} startColor='#2168A6' endColor="#E0EBEE" >
-                    <Image
-                        source={require('../assets/remindmeLogo.png')}
-                        style={styles.logo}
-                        resizeMode='cover'
-                    />
-                </Shadow>
                 <View>
                     <View style={styles.tituloContainer}>
-                        <Text style={[styles.titulo, styles.destaque]}>Lem</Text>
-                        <Text style={styles.titulo}>Brete</Text>
+                        <Text style={[styles.titulo, styles.destaque]}>add</Text>
                     </View>
-                    <Text style={styles.texto}>Para seus lembretes!</Text>
+                    <Text style={styles.texto}>aaaeeee</Text>
                 </View>
-                <Button function={navigate} title="Entrar"/>
                 
         </SafeAreaView>
     )
@@ -70,5 +59,3 @@ const styles = StyleSheet.create({
         color: "#2168A6",
     }
 })
-
-
