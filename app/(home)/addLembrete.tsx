@@ -1,61 +1,106 @@
-import { StyleSheet, Image, Text, View } from "react-native";
+import { Text, StyleSheet, View,Switch, TextInput } from "react-native";
 import React from "react";
+import Button from "../../components/Button/button";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
-import { Shadow } from "react-native-shadow-2";
+import { Stack } from "expo-router";
 
-export default function Index() {
 
-    function  navigate(){
-        
-        router.replace('/home')
+
+export default function LembreteEdit() {
+
+    function onChangeText(){
+
+    }
+    function handleLembreteAction(){
+
     }
     return (
         <SafeAreaView style={styles.container}>
-                <View>
-                    <View style={styles.tituloContainer}>
-                        <Text style={[styles.titulo, styles.destaque]}>add</Text>
-                    </View>
-                    <Text style={styles.texto}>aaaeeee</Text>
-                </View>
+            <View style={styles.productArea}>
                 
+ 
+                <View style={styles.detailsArea}>
+ 
+                    <Text style={styles.title}>Título</Text>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={onChangeText}
+                        textAlign='center'
+                    />
+ 
+ 
+                    <Text style={styles.description}>Descrição</Text>
+                    <TextInput
+                        editable={true}
+                        multiline={true}
+                        numberOfLines={6}
+                        maxLength={60}
+                        // onChangeText={text => onChangeText(text)}
+                        onChangeText={onChangeText}
+                        style={styles.input}
+                        textAlign='center'
+                    />
+                    <View style={styles.switchArea}>
+                        <Text>Não Concluída</Text>
+                        <Switch
+                            trackColor={{ false: '#767577', true: '#81b0ff' }}
+                            value={false}
+                        // thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                        // ios_backgroundColor="#3e3e3e"
+                        // onValueChange={toggleSwitch}
+                        // value={isEnabled}
+                        />
+                        <Text>Concluída</Text>
+                    </View>
+                </View>
+            </View>
+            <View style={styles.buttonArea}>
+                <Button title="Adicionar" function={handleLembreteAction} />
+            </View>
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-    container: {
+    container:{
         flex: 1,
-        justifyContent: 'center',
+        backgroundColor:'#E0EBEE',
+        justifyContent:'center',
+        alignItems:'center'
+    }, productArea:{
+        justifyContent:'center',
+        alignItems:'center'
+    }, detailsArea:{
+        borderWidth:3,
+        borderColor:"#2168A6",
+        borderRadius:40,
+        height:'80%',
+        padding:30,
+        justifyContent:'center',
         alignItems:'center',
-        gap: 16,
-        backgroundColor: '#E0EBEE',
-    },
-    logo: {
-        height: 150,
-        width: 150,
-        marginBottom: 20,
-        alignSelf: 'center',
-        borderColor: "#2168A6",
-        borderWidth: 1,
-
-        borderRadius: 20,
-    },
-    tituloContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignSelf: 'center'
-    },
-    titulo: {
-        fontSize: 32,
-        fontWeight: '900',
-        alignSelf: 'center'
-    },
-    texto: {
-        fontSize: 16,
-        alignSelf: 'center'
-    },
-    destaque: {
-        color: "#2168A6",
+        backgroundColor:'#fff'
+    }, title:{
+        fontSize:20,
+        fontWeight:'bold',
+        marginBottom:20,
+        color:"#2168A6",
+    }, input:{
+        borderWidth:3,
+        borderColor:"#2168A6",
+        borderRadius:20,
+        width:300,
+        marginBottom:30,
+    }, description:{
+        fontSize:20,
+        fontWeight:'bold',
+        marginBottom:20,
+        color:"#2168A6",
+    }, switchArea:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        width:'80%',
+        alignItems:'center',
+    }, buttonArea:{
+        width:'50%',
     }
 })

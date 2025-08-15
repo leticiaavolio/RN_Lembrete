@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
     }, detailsArea:{
         borderWidth:3,
         borderColor:"#2168A6",
-        borderRadius:'10%',
-        height:'auto',
+        borderRadius:40,
+        height:'80%',
         padding:30,
         justifyContent:'center',
         alignItems:'center',
@@ -94,18 +94,18 @@ const styles = StyleSheet.create({
     }, title:{
         fontSize:20,
         fontWeight:'bold',
-        marginBottom:10,
+        marginBottom:20,
         color:"#2168A6",
     }, input:{
         borderWidth:3,
         borderColor:"#2168A6",
         borderRadius:20,
         width:300,
-        marginBottom:10,
+        marginBottom:40,
     }, description:{
         fontSize:20,
         fontWeight:'bold',
-        marginBottom:10,
+        marginBottom:20,
         color:"#2168A6",
     }, switchArea:{
         flexDirection:'row',
